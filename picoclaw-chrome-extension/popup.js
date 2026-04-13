@@ -653,7 +653,8 @@ async function loadModelList() {
   const data = await resp.json();
   const models = data.models || [];
 
-  const filtered = models.filter(m => m.enabled);
+  // Show models that are either enabled or available (not disabled/unavailable)
+  const filtered = models.filter(m => m.enabled || m.available);
 
   const seen = new Set();
   const unique = filtered.filter(m => {

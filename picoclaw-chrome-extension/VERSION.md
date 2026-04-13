@@ -54,3 +54,4 @@ Backups are stored in `backups/` directory with naming convention:
 | 1.0.57 | 2026-04-11 | Fix i18n: language button shows 中文/EN, translate model/session/settings/debug buttons, fix waiting state restore |
 | 1.0.58 | 2026-04-11 | Fix i18n: lang button title shows correct language (English/中文), translate settings button, add restoreWaitingState() |
 | 1.0.59 | 2026-04-11 | Fix waiting state: add delayed restore (300ms) in restoreWaitingState() to ensure storage is read after loadSettings |
+| 1.0.60 | 2026-04-13 | Fix model list: show available models (enabled=false but available=true) |
