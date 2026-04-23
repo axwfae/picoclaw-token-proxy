@@ -3,7 +3,7 @@
 ## 版本
 
 - Token Proxy: v0.2.8.0
-- Chrome Extension: v1.0.79
+- Chrome Extension: v1.0.95
 
 ## 架構
 
