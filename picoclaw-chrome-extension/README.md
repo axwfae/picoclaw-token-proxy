@@ -46,3 +46,5 @@ v0.2.7 使用 HTTPOnly Cookie 認證，無需 Token。
 ## 版本
 
 詳見 VERSION.md
+
+當前版本: v1.0.83
