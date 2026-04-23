@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicoClaw 聊天</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="settings-panel" id="settingsPanel">
+    <h2 id="settingsTitle">PicoClaw</h2>
+    <div class="form-group">
+      <label for="serverUrl">服务器地址:</label>
+      <input type="text" id="serverUrl" placeholder="192.168.1.100">
+    </div>
+    <div class="form-group">
+      <label for="wsPort">端口:</label>
+      <input type="text" id="wsPort" placeholder="18800" value="18800">
+    </div>
+    <div class="form-group">
+      <label for="tokenProxyPort">Token代理端口:</label>
+      <input type="text" id="tokenProxyPort" placeholder="18801" value="18801">
+    </div>
+    <div class="form-group">
+      <label for="dashToken">密码:</label>
+      <input type="password" id="dashToken" placeholder="登录密码">
+    </div>
+    <button id="saveSettings" class="btn primary">保存设置</button>
+    <button id="testConnection" class="btn secondary">测试连接</button>
+    <button id="debugInfo" class="btn secondary">🔍 <span id="debugInfoText">除錯資訊</span></button>
+  </div>
+
+      <div class="chat-panel" id="chatPanel" style="display: none;">
+      <div class="chat-header disconnected" id="chatHeader">
+        <h2 id="headerTitle">PicoClaw 聊天</h2>
+        <div class="header-actions">
+          <button id="langBtn" class="icon-btn lang-btn" title="Language">EN</button>
+          <div class="model-dropdown" id="modelDropdown">
+            <button id="modelBtn" class="icon-btn model-btn" title="切换模型">🤖</button>
+            <div class="model-menu" id="modelMenu" style="display: none;">
+              <div class="model-list" id="modelList">
+                <div class="model-loading">加载中...</div>
+              </div>
+            </div>
+          </div>
+          <div class="session-dropdown" id="sessionDropdown">
+            <button id="sessionBtn" class="icon-btn session-btn" title="对话管理">💬</button>
+            <div class="session-menu" id="sessionMenu" style="display: none;">
+              <div class="session-list" id="sessionList">
+                <div class="session-loading">加载中...</div>
+              </div>
+              <div class="session-actions">
+                <button id="newSessionBtn" class="session-action-btn">
+                  <span class="action-icon">＋</span> 新对话
+                </button>
+              </div>
+            </div>
+          </div>
+          <button id="toggleSettings" class="icon-btn" title="设置" id="toggleSettingsLabel">⚙️</button>
+          <button id="connectionBtn" class="icon-btn" title="断开连接">🔌</button>
+        </div>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot-message">
+          <div class="message-content">
+            <p>你好！我是 PicoClaw 助手。请先配置服务器地址和 Token 开始聊天！</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <textarea 
+          id="messageInput" 
+          placeholder="输入消息..." 
+          rows="2"
+        ></textarea>
+        <div class="input-actions">
+          <button id="sendMessage" class="btn primary">发送</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="marked.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
