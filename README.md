@@ -2,8 +2,8 @@
 
 ## 版本
 
-- Token Proxy: v0.2.8.0
-- Chrome Extension: v1.0.95
+- Token Proxy: v0.2.9.0
+- Chrome Extension: v1.0.96
 
 ## 架構
 
@@ -66,6 +66,13 @@ Chrome Extension
 - Chrome Extension: `picoclaw-token-proxy/picoclaw-chrome-extension`
 
 ## 更新
+
+### v0.2.9.0
+- Go Proxy: 新增 HTTP client timeout, 修復登入無 cookie 返回假成功
+- Extension v1.0.96: 圖片選擇 bug 修復, WS URL cookie 脫敏, reconnect timer 洩漏修復
+- 移除未使用依賴 gopkg.in/yaml.v3
+- i18n/code 圖片大小統一修正為 5MB (對應伺服器限制)
+- 代碼清理: extractHost helper 消除重複, 死代碼 CSS 清除, magic number 常量化
 
 ### v0.2.8.0
 - 移除未使用代碼
